@@ -28,8 +28,8 @@ body {
 
 .maincontent {
    margin-top: 9%;
-   margin-left: 25%;
-   margin-right: 25;
+   margin-left: 20%;
+   margin-right: 25%;
 }
 
 #caregivers-button {
@@ -43,3 +43,29 @@ body {
    margin-right: 20%;
    margin-top: 1%;
 }
+
+.list-group-item:hover {
+       border-color: #18bc9c;
+ }
+
+ .left{
+    text-align: left;
+}
+
+.right {
+   text-align: right;
+}
+
+.center {
+   text-align: center;
+}
+
+
+ .circular {
+    	width: 80px;
+    	height: 80px;
+    	border-radius: 150px;
+    	-webkit-border-radius: 150px;
+    	-moz-border-radius: 150px;
+    	background: url('/assets/img/default.gif') no-repeat;
+ 	}

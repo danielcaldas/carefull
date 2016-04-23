@@ -1,16 +1,25 @@
-angular.module("CareFull").controller("caregiversController", ['$scope', function($scope) {
+angular.module("CareFull").controller("CaregiversController", ['$scope', function($scope) {
    $scope.caregivers = [
       {
          name: "João Vilela",
-         rating: 4
+         city: "Braga",
+         price: 3.5,
+         rating: 4,
+         occupation: "Fisioterapeuta"
       },
       {
-         name: "João Vilela",
-         rating: 4
+         name: "Miguel Chouriço",
+         city: "Porto",
+         price: 7.6,
+         rating: 3,
+         occupation: "Enfermeiro"
       },
       {
-         name: "João Vilela",
-         rating: 4
+         name: "Francisco Rolando",
+         city: "Lisboa",
+         price: 1.1,
+         rating: 2,
+         occupation: "Estudante"
       }
    ]
 }]);
