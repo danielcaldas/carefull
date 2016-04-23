@@ -1,29 +1,17 @@
 {
-    "name": "ProxyPrint",
+    "name": "CareFull",
     "version": "0.0.0",
     "license": "MIT",
     "dependencies": {
         "angular": "^1.5.0",
-        "angular-ui-router": "^0.2.18"
-    },
-    "devDependencies": {
-        "angular-mocks": "^1.4.8",
-        "http-server": "^0.6.1",
-        "karma": "^0.13.19",
-        "karma-chrome-launcher": "^0.2.2",
-        "karma-firefox-launcher": "^0.1.6",
-        "karma-jasmine": "^0.3.7",
-        "protractor": "^1.8.0"
-    },
-    "scripts": {
-        "prestart": "npm install",
-        "start": "http-server -a 0.0.0.0 -p 9000",
-        "pretest": "npm install",
-        "test": "node node_modules/karma/bin/karma start test/karma.conf.js",
-        "test-single": "node node_modules/karma/bin/karma start test/karma.conf.js --single-run",
-        "preupdate-webdriver": "npm install",
-        "update-webdriver": "webdriver-manager update",
-        "preprotractor": "npm run update-webdriver",
-        "protractor": "protractor test/protractor.conf.js"
-    }
+        "angular-ui-router": "^0.2.18",
+        "body-parser": "~1.5.2",
+        "express": "~4.7.2",
+        "jsonwebtoken": "^5.0.2",
+        "kerberos": "0.0.19",
+        "method-override": "~2.1.2",
+        "mongoose": "^4.1.12",
+        "morgan": "~1.2.2",
+        "ms": "^0.7.1"
+     }
 }
