@@ -8,8 +8,9 @@ angular.module("CareFull").config(['$stateProvider', '$urlRouterProvider', funct
      templateUrl: 'app/components/home/views/homepage.html'
  })
   .state('seeker', {
-    url: '/1',
-    templateUrl: 'app/components/caregivers/views/seeker-maincontent.html'
+    url: '/caregivers',
+    templateUrl: 'app/components/caregivers/views/seeker-maincontent.html',
+    controller: 'CaregiversController'
    })
    .state('seeker.caregivers' ,{
       url: '/caregivers',
@@ -23,6 +24,17 @@ angular.module("CareFull").config(['$stateProvider', '$urlRouterProvider', funct
    .state('seeker.messages' ,{
       url: '/messages',
       templateUrl: 'app/components/caregivers/views/messages.html'
+   })
+   .state('seeker.caregiverProfile', {
+      url: '/:caregiverID',
+      templateUrl: 'app/components/caregivers/views/caregiver-profile.html',
+      controller: 'CaregiverProfileController',
+      resolve: {
+         Caregiver: ['CaregiverService', function(CaregiverService){
+           return CaregiverService.getCaregiver();
+         }]
+      }
+
    });
 
 
