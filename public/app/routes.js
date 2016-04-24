@@ -14,16 +14,8 @@ angular.module("CareFull").config(['$stateProvider', '$urlRouterProvider', funct
                     })
                     .state('seeker.caregivers', {
                         url: '/caregivers',
-                        views: {
-                            'searchform': {
-                                templateUrl: 'app/components/caregivers/views/filters.html',
-                                controller: 'CaregiversController'
-                            },
-                            'caregivers': {
-                                templateUrl: 'app/components/caregivers/views/caregivers.html',
-                                controller: 'CaregiversController'
-                            }
-                           }
+                        templateUrl: 'app/components/caregivers/views/caregivers.html',
+                        controller: 'CaregiversController'
                         })
                         .state('seeker.profile', {
                             url: '/profile',
