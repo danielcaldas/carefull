@@ -71,10 +71,10 @@ body {
  	}
 
    .big-circular {
-        margin-left: 5%;
+        margin-left: 2%;
         margin-top: 5%;
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
         border-radius: 150px;
         -webkit-border-radius: 150px;
         -moz-border-radius: 150px;
@@ -96,7 +96,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52 ', en
 .greenBox {
    border-style: solid;
    border-color: #18bc9c;
-   padding: 6%;
+   padding: 5%;
    word-wrap: break-word;
 }
 

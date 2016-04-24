@@ -8,22 +8,25 @@
         <div class="col-sm-8">
             <div class="picture-placeholder">
                 <h3>{{caregiver.name}}</h3>
-                <br>{{caregiver.city}}</div>
+                <div class="right">
+                   <div star-rating rating="caregiver.avgRating" read-only="true" max-rating="5"></div>
+                </div>
+                <br>{{caregiver.city}}, {{caregiver.age}} anos </div>
         </div>
     </div>
     <hr>
     <div class="row">
         <div class="col-sm-4">
             <h4>Descrição</h4></div>
-        <div class="col-sm-8">asfasdfjasdifjaodjfos aodjfoaisdasdfasdfasdfasdfasdfasdfadsfjf o</div>
+        <div class="col-sm-8">{{caregiver.description}}</div>
     </div>
     <br>
     <br>
     <div class="row">
         <div class="col-sm-4">
-            <h4>Especialidades</h4></div>
+            <h4>Competências</h4></div>
         <div class="col-sm-8">
-            <div style="margin-top:2%">Especialidade1, Especialidade2, ESpecialidade3, Especialidade4, Especialidade5</div>
+            <div style="margin-top:3%">{{getSkills()}}</div>
         </div>
     </div>
     <br>
@@ -31,7 +34,7 @@
         <div class="col-sm-4">
             <h4>Horários</h4></div>
         <div class="col-sm-8">
-            <div style="margin-top:3%">Segunda-Feira, Terça-Feira: 12h-18h</div>
+            <div style="margin-top:3%">{{caregiver.schedule}}</div>
         </div>
     </div>
 </div>
