@@ -9,19 +9,20 @@ angular.module("CareFull").config(['$stateProvider', '$urlRouterProvider', funct
  })
   .state('seeker', {
     url: '/1',
-    templateUrl: 'app/components/caregivers/views/seeker-maincontent.html'
+    templateUrl: 'app/components/seeker/views/seeker-maincontent.html'
    })
    .state('seeker.caregivers' ,{
       url: '/caregivers',
-      templateUrl: 'app/components/caregivers/views/caregivers.html'
+      templateUrl: 'app/components/seeker/views/caregivers.html',
+      controller: 'seekerCaregiverFormCtrl'
    })
    .state('seeker.profile' ,{
       url: '/profile',
-      templateUrl: 'app/components/caregivers/views/profile.html'
+      templateUrl: 'app/components/seeker/views/profile.html'
    })
    .state('seeker.messages' ,{
       url: '/messages',
-      templateUrl: 'app/components/caregivers/views/messages.html'
+      templateUrl: 'app/components/seeker/views/messages.html'
    });
 
 

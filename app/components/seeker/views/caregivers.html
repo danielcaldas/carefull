@@ -1,0 +1,86 @@
+<div class="row">
+  <div>
+    <div class="well bs-component">
+      <form class="form-horizontal" style="margin: 1em;">
+        <fieldset>
+          <legend>O cuidador ideal...</legend>
+          <div class="row">
+            <!-- Local -->
+            <div class="form-group col-sm-3">
+              <label for="select" class="col-lg-10">Distrito</label><br/>
+              <div class="col-lg-10">
+                <select class="form-control" id="district" name="district" ng-model="district">
+                  <option value="">Escolha o distrito</option>
+                  <option>Porto</option>
+                  <option>Lisboa</option>
+                </select>
+                <br>
+              </div>
+            </div>
+            <div class="form-group col-sm-6">
+              <label for="select" class="col-lg-10">Localidade</label><br/>
+              <div class="col-lg-10">
+                <select class="form-control" id="local" name="local" ng-model="localidade">
+                  <option value="">Escolha localidade</option>
+                  <option>Localidade 1</option>
+                  <option>Localidade 2</option>
+                </select>
+              </div>
+            </div>
+            <!-- Genre -->
+            <div class="form-group col-sm-3">
+              <label class="col-sm-4 control-label">Género</label>
+              <div class="col-lg-10">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="male" value="M" ng-model="male">
+                    Masculino
+                  </label>
+                  <label>
+                    <input type="radio" name="optionsRadios" id="female" value="F" ng-model="female">
+                    Feminino
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Age -->
+            <div class="form-group col-sm-3">
+              <label for="select" class="form-group col-sm-3">Idade</label><br/>
+              <rzslider rz-slider-model="ageSlider.minValue"
+          rz-slider-high="ageSlider.maxValue"
+          rz-slider-options="ageSlider.options"></rzslider>
+            </div>
+            <hr/>
+            <a href="" class="btn btn-primary btn-sm" style="float: right; margin-right: 10%;" ng-click="showAdvancedOptions()">Opções avançadas</a>
+            <a href="" class="btn btn-primary btn-sm" style="float: right; margin-right: 10%;" ng-click="getInfo()">Mostrar cenas</a>
+          </div>
+          <!-- Advanced Options -->
+          <div class="form-group" ng-show="advancedOptions">
+            <hr>
+            <div class="row">
+              <div class="form-group col-sm-6">
+              <!-- clearfix -->
+              </div>
+              <div class="form-group col-sm-3">
+                <label for="select" class="form-group col-sm-3">Preço</label><br/>
+                <rzslider rz-slider-model="priceSlider.minValue"
+            rz-slider-high="priceSlider.maxValue"
+            rz-slider-options="priceSlider.options"></rzslider>
+              </div>
+              <div class="form-group col-sm-3">
+                <label for="select" class="col-lg-10">Especialidades</label><br/>
+                <div class="col-lg-10">
+                  <select class="form-control" id="select">
+                    <option>Porto</option>
+                    <option>Lisboa</option>
+                  </select>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>

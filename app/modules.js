@@ -1,1 +1,1 @@
-angular.module('CareFull', ['ui.router']);
+angular.module('CareFull', ['ui.router', 'rzModule']);
