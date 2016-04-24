@@ -72,7 +72,7 @@ body {
 
    .big-circular {
         margin-left: 5%;
-        margin-top: 5%;   
+        margin-top: 5%;
         width: 200px;
         height: 200px;
         border-radius: 150px;
@@ -93,8 +93,14 @@ background: linear-gradient(135deg, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 0%
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52 ', endColorstr='#91e842 ', GradientType=1 );
 }
 
-#caregiverProfile {
+.greenBox {
    border-style: solid;
    border-color: #18bc9c;
+   padding: 6%;
+   word-wrap: break-word;
+}
 
+.picture-placeholder{
+   margin-top: 22%;
+   margin-left: 15%;
 }
