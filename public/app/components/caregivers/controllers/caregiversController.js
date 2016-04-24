@@ -2,9 +2,28 @@ angular.module("CareFull").controller("CaregiversController", ['$scope', 'Caregi
     function($scope, CaregiverService, $state) {
 
         $scope.limit = 3;
+        $scope.advancedOptions = true;
+
+        $scope.showAdvancedOptions = function () {
+           $scope.advancedOptions = !$scope.advancedOptions;
+        }
+
+
+// Price slider
+ $scope.priceSlider = {
+   minValue: 0,
+   maxValue: 55,
+   options: {
+     floor: 0,
+     ceil: 100,
+     translate: function(value) {
+       return '€' + value;
+     }
+   }
+ };
 
         $scope.caregivers = [
-{"id":0,"name":"Maria Silva","username":"maria silva","job":"Enfermeiro(a)","gender":"F","age":47,"skills":[],"district":"Lisboa","city":"Estoril","reviews":[{"rating":3,"comment":"Penso que o servi\u00e7o foi razo\u00e1vel.","user":"Mateus Matias"},{"rating":4,"comment":"Boa atitude, muito prest\u00e1vel.","user":"Sara Matos"},{"rating":5,"comment":"Penso que nunca irei encontrar melhor aqui no CareFull. Obrigado!","user":"Sara Matos"},{"rating":0,"comment":"Pouco prest\u00e1vel, pre\u00e7o demasiado elevado para o servi\u00e7o.","user":"Sara Matos"},{"rating":1,"comment":"Penso que para profissional de saude podia prestar um melhor servico","user":"Carlos Costa"}],"avgRating":5,"price":"11\u20ac\/h","description":"Ola, chamo-me Maria Silva, sou um(a) Enfermeiro(a) e estou atualmente \u00e0 procura de fazer umas horas extra a tomar conta de pessoas idosas.","schedule":"Segundas e Quintas entre as 9h e as 12h"},
+{"id":0,"name":"Maria Silva","username":"maria silva","job":"Enfermeiro(a)","gender":"F","age":47,"skills":[],"district":"Lisboa","city":"Estoril","reviews":[{"rating":3,"comment":"Penso que o servi\u00e7o foi razo\u00e1vel.","user":"Mateus Matias"},{"rating":4,"comment":"Boa atitude, muito prest\u00e1vel.","user":"Sara Matos"},{"rating":5,"comment":"Penso que nunca irei encontrar melhor aqui no CareFull. Obrigado!","user":"Sara Matos"},{"rating":1,"comment":"Pouco prest\u00e1vel, pre\u00e7o demasiado elevado para o servi\u00e7o.","user":"Sara Matos"},{"rating":1,"comment":"Penso que para profissional de saude podia prestar um melhor servico","user":"Carlos Costa"}],"avgRating":5,"price":"11\u20ac\/h","description":"Ola, chamo-me Maria Silva, sou um(a) Enfermeiro(a) e estou atualmente \u00e0 procura de fazer umas horas extra a tomar conta de pessoas idosas.","schedule":"Segundas e Quintas entre as 9h e as 12h"},
 {"id":1,"name":"Tiago Pinto","username":"tiago pinto","job":"Arquiteto(a)","gender":"M","age":42,"skills":[["DEMENCIA","Demencia"],["SONDA_NASOG","Sonda Nasogastrica"],["ACAMADO","Pessoas acamadas"]],"district":"Lisboa","city":"Estoril","reviews":[{"rating":1,"comment":"Penso que para profissional de saude podia prestar um melhor servico","user":"Mateus Matias"},{"rating":2,"comment":"N\u00e3o foi pontual no entanto nao tenho queixa do servi\u00e7o prestado.","user":"Carlos Costa"},{"rating":3,"comment":"Penso que o servi\u00e7o foi razo\u00e1vel.","user":"Mateus Matias"},{"rating":4,"comment":"Boa atitude, muito prest\u00e1vel.","user":"Carlos Costa"},{"rating":5,"comment":"Penso que nunca irei encontrar melhor aqui no CareFull. Obrigado!","user":"Mateus Matias"}],"avgRating":5,"price":"36\u20ac\/h","description":"Ola, chamo-me Tiago Pinto, sou um(a) Arquiteto(a) e estou atualmente \u00e0 procura de fazer umas horas extra a tomar conta de pessoas idosas.","schedule":"Fins de semana"},
 {"id":2,"name":"Tiago Pinto","username":"tiago pinto","job":"Arquiteto(a)","gender":"M","age":23,"skills":[],"district":"Lisboa","city":"Estoril","reviews":[{"rating":4,"comment":"Boa atitude, muito prest\u00e1vel.","user":"Mateus Matias"},{"rating":5,"comment":"Penso que nunca irei encontrar melhor aqui no CareFull. Obrigado!","user":"Martim Pereira"},{"rating":0,"comment":"Pouco prest\u00e1vel, pre\u00e7o demasiado elevado para o servi\u00e7o.","user":"Sara Matos"},{"rating":1,"comment":"Penso que para profissional de saude podia prestar um melhor servico","user":"Martim Pereira"},{"rating":2,"comment":"N\u00e3o foi pontual no entanto nao tenho queixa do servi\u00e7o prestado.","user":"Carlos Costa"}],"avgRating":5,"price":"14\u20ac\/h","description":"Ola, chamo-me Tiago Pinto, sou um(a) Arquiteto(a) e estou atualmente \u00e0 procura de fazer umas horas extra a tomar conta de pessoas idosas.","schedule":"Sabados"},
 {"id":3,"name":"Tiago Pinto","username":"tiago pinto","job":"Estudante","gender":"M","age":38,"skills":[["SONDA_NASOG","Sonda Nasogastrica"]],"district":"Lisboa","city":"Estoril","reviews":[{"rating":2,"comment":"N\u00e3o foi pontual no entanto nao tenho queixa do servi\u00e7o prestado.","user":"Sara Matos"},{"rating":3,"comment":"Penso que o servi\u00e7o foi razo\u00e1vel.","user":"Martim Pereira"},{"rating":4,"comment":"Boa atitude, muito prest\u00e1vel.","user":"Mateus Matias"},{"rating":5,"comment":"Penso que nunca irei encontrar melhor aqui no CareFull. Obrigado!","user":"Carlos Costa"}],"avgRating":2,"price":"12\u20ac\/h","description":"Ola, chamo-me Tiago Pinto, sou um(a) Estudante e estou atualmente \u00e0 procura de fazer umas horas extra a tomar conta de pessoas idosas.","schedule":"Segunda a Sexta feira a partir das 18h"},
