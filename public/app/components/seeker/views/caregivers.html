@@ -1,4 +1,4 @@
-<ul class="list-group" ng-repeat="caregiver in caregivers| limitTo:limit">
+<ul class="list-group" ng-repeat="caregiver in caregivers| limitTo:limit | filter: search">
     <li class="list-group-item">
         <div class="row">
             <div class="col-sm-3">
