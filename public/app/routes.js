@@ -9,7 +9,8 @@ angular.module("CareFull").config(['$stateProvider', '$urlRouterProvider', funct
  })
   .state('seeker', {
     url: '/1',
-    templateUrl: 'app/components/caregivers/views/seeker-maincontent.html'
+    templateUrl: 'app/components/caregivers/views/seeker-maincontent.html',
+    controller: 'CaregiversController'
    })
    .state('seeker.caregivers' ,{
       url: '/caregivers',
