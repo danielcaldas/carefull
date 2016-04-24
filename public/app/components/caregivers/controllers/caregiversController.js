@@ -18,6 +18,10 @@ function($scope, CaregiverService, $state) {
     console.log("Preço: " + $scope.priceSlider.minValue + ", " + $scope.priceSlider.maxValue);
   }
 
+  $scope.myfilter = function (item, index) {
+     console.log(item);
+ }
+
   // Price slider
   $scope.priceSlider = {
     minValue: 0,

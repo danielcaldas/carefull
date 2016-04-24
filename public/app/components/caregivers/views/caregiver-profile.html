@@ -1,61 +1,58 @@
-<div class="center">
-    <h2>Perfil</h2></div>
-<div class="greenBox">
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="big-circular"></div>
-        </div>
-        <div class="col-sm-8">
-            <div class="picture-placeholder">
-                <h3>{{caregiver.name}}</h3>
-                <div class="right">
-                   <div star-rating rating="caregiver.avgRating" read-only="true" max-rating="5"></div>
-                </div>
-                <br>{{caregiver.city}}, {{caregiver.age}} anos </div>
-        </div>
-    </div>
-    <hr>
-    <div class="row">
-        <div class="col-sm-4">
-            <h4>Descrição</h4></div>
-        <div class="col-sm-8">{{caregiver.description}}</div>
-    </div>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-sm-4">
-            <h4>Competências</h4></div>
-        <div class="col-sm-8">
-            <div style="margin-top:3%">{{getSkills()}}</div>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-sm-4">
-            <h4>Horários</h4></div>
-        <div class="col-sm-8">
-            <div style="margin-top:3%">{{caregiver.schedule}}</div>
-        </div>
-    </div>
-</div>
-<br>
-<br>
-<div class="center">
-    <h2>Avaliações</h2></div>
-<div class="greenBox">
-    <ul class="list-group">
-        <li class="custom-list-group-item" ng-repeat="review in caregiver.reviews | limitTo:limit">
-            <div class="row">
-                <div class="col-sm-4"><strong>{{review.user}}</strong></div>
-                <div class="right"><div class="col-sm-8"><div star-rating rating="review.rating" read-only="true" max-rating="5"></div></div></div>
-                <div class="horizontal-line">
-                   <hr>
+<form>
+    <div class="greenBox">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <input type="text" name="district" id="district" ng-model="city" placeholder="Cidade.." style="margin-top: 10%;">
                 </div>
             </div>
+            <div class="col-sm-4">
+                <button class="btn btn-success" ng-click="showAdvancedOptions()" style="margin-top:6%"><i class="fa fa-cogs" style="margin-right:4%" aria-hidden="true"></i>Opções Avançadas</button>
+            </div>
+        </div>
+        <div ng-hide="advancedOptions">
             <div class="row">
-               <div class="col-sm-8">{{review.comment}}</div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                           <label for="select" class="col-lg-2 control-label"></label>
+                           <select class="form-control" id="select">
+                                <option value="">Competências</option>
+                                <option>Sonda Nasogástrica</option>
+                                <option>Demência</option>
+                                <option>Acamados</option>
+                                <option>Higiene no leito</option>
+                           </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <rzslider rz-slider-model="priceSlider.minValue" rz-slider-high="priceSlider.maxValue" rz-slider-options="priceSlider.options"></rzslider>
 
-            </div>
-        </li>
-    </ul>
-</div>
+                    </div>
+                    <div class="col-sm-6">
+
+                    </div>
+
+             </div>
+          </div>
+       </div>
+                <div class="container" style="margin-top:5%">
+                </div>
+                <ul class="list-group" ng-repeat="caregiver in caregivers| filter: city | limitTo:limit">
+                    <li class="list-group-item" ng-click="loadCaregiver($index)">
+                        <div class="row">
+                           <div class="col-sm-3">
+                                <div class="circular"></div>
+                                <br>
+                                <div star-rating rating="caregiver.avgRating" read-only="true" max-rating="5"></div>
+                           </div>
+                           <div class="col-sm-6">{{caregiver.name}}
+                                <br>({{caregiver.city}})
+                                <hr> {{caregiver.job}}
+                           </div>
+                           <div class="col-sm-3">{{caregiver.price}}</div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="center">
+                    <button class="btn btn-success" ng-click="loadMore()">Carregar mais</button>
+                </div>
