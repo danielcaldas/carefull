@@ -44,16 +44,16 @@
     <h2>Avaliações</h2></div>
 <div class="greenBox">
     <ul class="list-group">
-        <li class="custom-list-group-item">
+        <li class="custom-list-group-item" ng-repeat="review in caregiver.reviews | limitTo:limit">
             <div class="row">
-                <div class="col-sm-4"><strong>José António:</strong></div>
-                <div class="right"><div class="col-sm-8"><div star-rating rating="3" read-only="true" max-rating="5"></div></div></div>
+                <div class="col-sm-4"><strong>{{review[2][0]}}</strong></div>
+                <div class="right"><div class="col-sm-8"><div star-rating rating="review[0]" read-only="true" max-rating="5"></div></div></div>
                 <div class="horizontal-line">
                    <hr>
                 </div>
             </div>
             <div class="row">
-               <div class="col-sm-8">adfasdfoiasdjfasojdfoaisjdfoiajsdofiajsdoifjasodijfaosdijfoasijdfoaisjdfoaisjdfoaisj</div>
+               <div class="col-sm-8">{{review[1]}}</div>
 
             </div>
         </li>
