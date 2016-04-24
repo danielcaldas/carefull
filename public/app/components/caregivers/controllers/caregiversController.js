@@ -1,16 +1,95 @@
-angular.module("CareFull").controller("caregiversController", ['$scope', function($scope) {
+angular.module("CareFull").controller("CaregiversController", ['$scope', function($scope) {
+
+   $scope.limit = 3;
+
+
    $scope.caregivers = [
       {
          name: "João Vilela",
-         rating: 4
+         city: "Braga",
+         price: 3.5,
+         rating: 4,
+         occupation: "Fisioterapeuta"
       },
       {
-         name: "João Vilela",
-         rating: 4
+         name: "Miguel Chouriço",
+         city: "Porto",
+         price: 7.6,
+         rating: 3,
+         occupation: "Enfermeiro"
       },
       {
+         name: "Francisco Rolando",
+         city: "Lisboa",
+         price: 1.1,
+         rating: 2,
+         occupation: "Estudante"
+      },{
          name: "João Vilela",
-         rating: 4
+         city: "Braga",
+         price: 3.5,
+         rating: 4,
+         occupation: "Fisioterapeuta"
+      },
+      {
+         name: "Miguel Chouriço",
+         city: "Porto",
+         price: 7.6,
+         rating: 3,
+         occupation: "Enfermeiro"
+      },
+      {
+         name: "Francisco Rolando",
+         city: "Lisboa",
+         price: 1.1,
+         rating: 2,
+         occupation: "Estudante"
+      },{
+         name: "João Vilela",
+         city: "Braga",
+         price: 3.5,
+         rating: 4,
+         occupation: "Fisioterapeuta"
+      },
+      {
+         name: "Miguel Chouriço",
+         city: "Porto",
+         price: 7.6,
+         rating: 3,
+         occupation: "Enfermeiro"
+      },
+      {
+         name: "Francisco Rolando",
+         city: "Lisboa",
+         price: 1.1,
+         rating: 2,
+         occupation: "Estudante"
+      },{
+         name: "João Vilela",
+         city: "Braga",
+         price: 3.5,
+         rating: 4,
+         occupation: "Fisioterapeuta"
+      },
+      {
+         name: "Miguel Chouriço",
+         city: "Porto",
+         price: 7.6,
+         rating: 3,
+         occupation: "Enfermeiro"
+      },
+      {
+         name: "Francisco Rolando",
+         city: "Lisboa",
+         price: 1.1,
+         rating: 2,
+         occupation: "Estudante"
       }
-   ]
+   ];
+
+   $scope.loadMore = function() {
+      console.log($scope.caregivers.length);
+      var incremented = $scope.limit + 3;
+      $scope.limit = incremented > $scope.caregivers.length ? $scope.caregivers.length : incremented;
+    };
 }]);

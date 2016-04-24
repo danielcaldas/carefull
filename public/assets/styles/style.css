@@ -28,8 +28,8 @@ body {
 
 .maincontent {
    margin-top: 9%;
-   margin-left: 25%;
-   margin-right: 25;
+   margin-left: 20%;
+   margin-right: 25%;
 }
 
 #caregivers-button {
@@ -42,4 +42,42 @@ body {
    text-align: right;
    margin-right: 20%;
    margin-top: 1%;
+}
+
+.list-group-item:hover {
+       border-color: #18bc9c;
+ }
+
+ .left{
+    text-align: left;
+}
+
+.right {
+   text-align: right;
+}
+
+.center {
+   text-align: center;
+}
+
+
+ .circular {
+    	width: 80px;
+    	height: 80px;
+    	border-radius: 150px;
+    	-webkit-border-radius: 150px;
+    	-moz-border-radius: 150px;
+    	background: url('/assets/img/logo.png') no-repeat;
+ 	}
+
+
+.background {
+    background: rgba(210,255,82,1);
+background: -moz-linear-gradient(-45deg, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 0%, rgba(210,255,82,0.98) 42%, rgba(210,255,82,0.97) 73%, rgba(145,232,66,0.96) 91%, rgba(145,232,66,0.96) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(210,255,82,1)), color-stop(0%, rgba(145,232,66,1)), color-stop(42%, rgba(210,255,82,0.98)), color-stop(73%, rgba(210,255,82,0.97)), color-stop(91%, rgba(145,232,66,0.96)), color-stop(100%, rgba(145,232,66,0.96)));
+background: -webkit-linear-gradient(-45deg, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 0%, rgba(210,255,82,0.98) 42%, rgba(210,255,82,0.97) 73%, rgba(145,232,66,0.96) 91%, rgba(145,232,66,0.96) 100%);
+background: -o-linear-gradient(-45deg, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 0%, rgba(210,255,82,0.98) 42%, rgba(210,255,82,0.97) 73%, rgba(145,232,66,0.96) 91%, rgba(145,232,66,0.96) 100%);
+background: -ms-linear-gradient(-45deg, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 0%, rgba(210,255,82,0.98) 42%, rgba(210,255,82,0.97) 73%, rgba(145,232,66,0.96) 91%, rgba(145,232,66,0.96) 100%);
+background: linear-gradient(135deg, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 0%, rgba(210,255,82,0.98) 42%, rgba(210,255,82,0.97) 73%, rgba(145,232,66,0.96) 91%, rgba(145,232,66,0.96) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52 ', endColorstr='#91e842 ', GradientType=1 );
 }
