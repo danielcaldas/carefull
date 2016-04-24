@@ -1,4 +1,4 @@
-<ul class="list-group" ng-repeat="caregiver in caregivers">
+<ul class="list-group" ng-repeat="caregiver in caregivers| limitTo:limit">
     <li class="list-group-item">
         <div class="row">
             <div class="col-sm-3">
@@ -14,3 +14,6 @@
         </div>
     </li>
 </ul>
+<div class="center">
+<button class="btn btn-success" ng-click="loadMore()">Carregar mais</button>
+</div>
