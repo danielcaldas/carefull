@@ -1,5 +1,5 @@
 <ul class="list-group" ng-repeat="caregiver in caregivers| limitTo:limit">
-    <li class="list-group-item">
+    <li class="list-group-item" ng-click="loadCaregiver($index)">
         <div class="row">
             <div class="col-sm-3">
                 <div class="circular"></div>
