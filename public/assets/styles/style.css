@@ -104,3 +104,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52 ', en
    margin-top: 22%;
    margin-left: 15%;
 }
+
+.horizontal-line {
+   margin-left: 10%;
+   margin-right: 10%;
+}
+
+.custom-list-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #ffffff;
+  border: 1px solid #ecf0f1;
+}
