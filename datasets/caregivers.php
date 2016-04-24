@@ -96,10 +96,10 @@ for ($i=0; $i < 20; $i++) {
   // random reviews
   $ireviews = array();
   $repeat = array();
-  $new_r = rand(0,count($COMMENTZ)-1);
+  $new_r = rand(1,count($COMMENTZ)-1);
   $nreviews = rand(0,count($COMMENTZ)-1);
   for ($j=0; $j < $nreviews; $j++) {
-    $ireviews[$j] = array($new_r, $COMMENTZ[$new_r],$NAMES_USERS[rand(0,count($NAMES_USERS)-1)]);
+    $ireviews[$j] = array("rating" => $new_r, "comment" => $COMMENTZ[$new_r], "user" => $NAMES_USERS[rand(0,count($NAMES_USERS)-1)][0]);
     array_push($repeat,$new_r);
     if($new_r >= count($COMMENTZ)-1) {
       $new_r=0;
